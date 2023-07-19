@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/Invoices',[TestController::class, 'index'])->name('Thames.Invoices');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
