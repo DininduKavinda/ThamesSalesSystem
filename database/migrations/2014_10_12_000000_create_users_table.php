@@ -22,10 +22,10 @@ return new class extends Migration
             $table->string('image');
             $table->integer('ro_id');
             $table->string('address');
-            $table->string('Occupation');
+            $table->string('Occupation_id');
             $table->string('Gender_id');
             $table->string('NIC')->unique();
-            $table->string('Department');
+            $table->string('Department_id');
             $table->date('dateJoined');
             $table->string('employment_type');
             $table->string('password');
