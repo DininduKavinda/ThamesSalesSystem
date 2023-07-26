@@ -26,9 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $office = Office::get();
-        $occupation = Occupation::get();
-        $department = Department::get();
-        return view('welcome', compact('office','occupation','department'));
+        return view('welcome');
     }
 }

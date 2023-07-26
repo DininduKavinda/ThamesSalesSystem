@@ -25,6 +25,7 @@
             $office = DB::select('SELECT * FROM offices');
             $occupation = DB::select('SELECT * FROM occupations');
             $department = DB::select('SELECT * FROM departments');
+            $ut_id = DB::select('SELECT * FROM user_types');
         @endphp
 
         <!-- Main Content Wrapper -->
@@ -83,7 +84,7 @@
                                         <input id="name" type="text" name="name" value="{{ old('name') }}"
                                             required autocomplete="name" autofocus
                                             class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                            required placeholder="Your Name" type="text">
+                                            required placeholder="Your Name">
                                         <span
                                             class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
                                             <i class="far fa-user text-base"></i>
@@ -122,7 +123,7 @@
                                         <input id="email" name="email" value="{{ old('email') }}" required
                                             autocomplete="email"
                                             class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                            required placeholder="Email address" type="text">
+                                            required placeholder="Email address" >
                                         <span
                                             class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
                                             <i class="fa-regular fa-envelope text-base"></i>
@@ -208,7 +209,7 @@
                                 </label>
                             </div>
 
-                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
                                 <label class="block">
                                     <span>Date of Joining the Company</span>
                                     <span class="relative mt-1.5 flex">
@@ -240,21 +241,26 @@
                                         </span>
                                     </span>
                                 </label>
-                            </div>
-                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                                <label
-                                    class="btn relative bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90" required>
-                                    <input tabindex="-1" type="file"
-                                        class="pointer-events-none absolute inset-0 h-full w-full opacity-0" />
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fa-solid fa-cloud-arrow-up text-base"></i>
-                                        <span>Choose File</span>
-                                    </div>
+                                <label class="block">
+                                    <span>Account Type</span>
+                                    <select id="ut_id" name="ut_id" value="{{ old('ut_id') }}"
+                                        autocomplete="ut_id"
+                                        class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent"
+                                        required>
+                                        <option>-- Select --</option>
+                                        @foreach ($ut_id as $row)
+                                            <option value="{{ $row->id }}">{{ $row->ut_name }}</option>
+                                        @endforeach
+                                    </select>
                                 </label>
+                            </div>
+                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
                                 <label class="block">
                                     <span>Password</span>
                                     <span class="relative mt-1.5 flex">
                                         <input
+                                        id="password" name="password"
                                             class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                             required placeholder="Password" type="password">
                                         <span
@@ -267,8 +273,9 @@
                                     <span>Confirm Password</span>
                                     <span class="relative mt-1.5 flex">
                                         <input
+                                        id="password-confirm" name="password_confirmation"
                                             class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                            required placeholder="COnfirm Password" type="password">
+                                            required placeholder="Confirm Password" type="password">
                                         <span
                                             class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent">
                                             <i class="fa-solid fa-flag"></i>

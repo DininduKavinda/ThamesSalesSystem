@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('ut_id');
             $table->string('phone')->unique();
             $table->string('fullname');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->integer('ro_id');
             $table->string('address');
             $table->string('Occupation_id');

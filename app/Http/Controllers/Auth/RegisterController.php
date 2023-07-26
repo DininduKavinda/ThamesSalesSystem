@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -55,17 +56,15 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'ut_id' => ['required', 'integer'],
             'phone' => ['required', 'string', 'max:255'],
-            'image'=> ['required', 'string', 'max:255'],
             'fullname'=> ['required', 'string', 'max:255'],
-            'ro_id'=> ['required', 'integer'],
+            'report_office'=> ['required', 'integer'],
             'address'=> ['required', 'string', 'max:255'],
-            'Occupation_id'=> ['required', 'integer'],
-            'Gender_id'=> ['required', 'string', 'max:255'],
-            'NIC'=> ['required', 'string', 'max:255'],
-            'Department_id'=> ['required', 'integer'],
-            'dateJoined'=> ['required', 'string', 'max:255'],
-            'employment_type'=> ['required', 'string', 'max:255'],
-            'password'=> ['required', 'string', 'max:255'],
+            'occupation'=> ['required', 'integer'],
+            'gender'=> ['required', 'string', 'max:255'],
+            'nic'=> ['required', 'string', 'max:255'],
+            'department'=> ['required', 'integer'],
+            'date'=> ['required', 'string', 'max:255'],
+            'emptype'=> ['required', 'string', 'max:255'],
         ]);
     }
 
@@ -81,6 +80,17 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'ut_id' =>  $data['ut_id'],
+            'phone' =>  $data['phone'],
+            'fullname'=>  $data['fullname'],
+            'ro_id'=>  $data['report_office'],
+            'address'=>  $data['address'],
+            'Occupation_id'=>  $data['occupation'],
+            'Gender_id'=>  $data['gender'],
+            'NIC'=>  $data['nic'],
+            'Department_id'=>  $data['department'],
+            'dateJoined'=>  $data['date'],
+            'employment_type'=>  $data['emptype'],
         ]);
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SalesExecetiveController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/Invoices',[TestController::class, 'index'])->name('Thames.Invoices');
+Route::get('/Invoices', [TestController::class, 'index'])->name('Thames.Invoices');
 
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+
+Route::prefix('SalesExecutive')->group(function () {
+    Route::controller(SalesExecetiveController::class)->group(function () {
+        Route::get('/DashBoard', 'DashBoard')->name('SalesExecetive.Dashboard');
+        Route::get('/DailyReportForm', 'DailyReportForm')->name('SalesExecetive.DailyReportForm');
+    });
+});
 
 Route::fallback(function () {
     return view('404');
