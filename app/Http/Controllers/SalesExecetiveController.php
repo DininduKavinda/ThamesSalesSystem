@@ -13,4 +13,7 @@ class SalesExecetiveController extends Controller
     public function DailyReportForm(){
         return view('Web.ProfileManager.SalesExecutives.DailyReportSalesExecutive');
     }
+    public function PostDailyReportForm(Request $request){
+        dump($request->all());
+    }
 }
