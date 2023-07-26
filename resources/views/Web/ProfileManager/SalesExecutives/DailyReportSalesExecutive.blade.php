@@ -65,173 +65,59 @@
                                             placeholder="Enter post title" type="text" name="todayRoute"
                                             id="todayRoute">
                                     </label>
+                                    <div id="inputSetsContainer">
+                                        <div class="input-set">
+                                            <div class="my-4 flex items-center space-x-3">
+                                                <div class="h-px flex-1 bg-slate-200 dark:bg-navy-500"></div>
+                                                <p>And</p>
+                                                <div class="h-px flex-1 bg-slate-200 dark:bg-navy-500"></div>
+                                            </div>
+                                            <!-- First Set of Inputs -->
+                                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
 
-                                    <!-- First Set of Inputs -->
-                                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Shop Name</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter shop name" type="text" name="shopName1"
-                                                id="shopName1">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Location</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter location" type="text" name="location1"
-                                                id="location1">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Time</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter time" type="text" name="time1" id="time1">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Expected
-                                                Amount</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter expected amount" type="text"
-                                                name="expectedAmount1" id="expectedAmount1">
-                                        </label>
+                                                <label class="block">
+                                                    <span class="font-medium text-slate-600 dark:text-navy-100">Shop
+                                                        Name</span>
+                                                    <input
+                                                        class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                                        placeholder="Enter shop name" type="text" name="shopName1[]"
+                                                        id="shopName1">
+                                                </label>
+                                                <label class="block">
+                                                    <span
+                                                        class="font-medium text-slate-600 dark:text-navy-100">Location</span>
+                                                    <input
+                                                        class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                                        placeholder="Enter location" type="text" name="location1[]"
+                                                        id="location1">
+                                                </label>
+                                                <label class="block">
+                                                    <span
+                                                        class="font-medium text-slate-600 dark:text-navy-100">Time</span>
+                                                    <input
+                                                        class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                                        placeholder="Enter time" type="text" name="time1[]"
+                                                        id="time1">
+                                                </label>
+                                                <label class="block">
+                                                    <span class="font-medium text-slate-600 dark:text-navy-100">Expected
+                                                        Amount</span>
+                                                    <input
+                                                        class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                                        placeholder="Enter expected amount" type="text"
+                                                        name="expectedAmount1[]" id="expectedAmount1">
+                                                </label>
+
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <!-- Second Set of Inputs -->
-                                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Shop Name</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter shop name" type="text" name="shopName2"
-                                                id="shopName2">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Location</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter location" type="text" name="location2"
-                                                id="location2">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Time</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter time" type="text" name="time2" id="time2">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Expected
-                                                Amount</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter expected amount" type="text"
-                                                name="expectedAmount2" id="expectedAmount2">
-                                        </label>
-                                    </div>
-                                    <!-- Third Set of Inputs -->
-                                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Shop
-                                                Name</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter shop name" type="text" name="shopName3"
-                                                id="shopName3">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Location</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter location" type="text" name="location3"
-                                                id="location3">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Time</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter time" type="text" name="time3"
-                                                id="time3">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Expected
-                                                Amount</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter expected amount" type="text"
-                                                name="expectedAmount3" id="expectedAmount3">
-                                        </label>
-                                    </div>
-
-                                    <!-- Fourth Set of Inputs -->
-                                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Shop
-                                                Name</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter shop name" type="text" name="shopName4"
-                                                id="shopName4">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Location</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter location" type="text" name="location4"
-                                                id="location4">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Time</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter time" type="text" name="time4"
-                                                id="time4">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Expected
-                                                Amount</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter expected amount" type="text"
-                                                name="expectedAmount4" id="expectedAmount4">
-                                        </label>
-                                    </div>
-
-                                    <!-- Fifth Set of Inputs -->
-                                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Shop
-                                                Name</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter shop name" type="text" name="shopName5"
-                                                id="shopName5">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Location</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter location" type="text" name="location5"
-                                                id="location5">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Time</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter time" type="text" name="time5"
-                                                id="time5">
-                                        </label>
-                                        <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Expected
-                                                Amount</span>
-                                            <input
-                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                                placeholder="Enter expected amount" type="text"
-                                                name="expectedAmount5" id="expectedAmount5">
-                                        </label>
-                                    </div>
+                                    <button
+                                    class="btn space-x-2 bg-secondary font-medium text-white hover:bg-secondary-focus focus:bg-secondary-focus active:bg-secondary-focus/90"
+                                   type="button" id="addButton">
 
 
+                                    <span>+ Add</span>
+                                  </button>
                                     <!-- Add more sets of inputs if needed -->
 
                                     <!-- Summary -->
@@ -306,6 +192,39 @@
     <script>
         window.addEventListener("DOMContentLoaded", () => Alpine.start());
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Counter to keep track of the number of input sets
+            let inputSetCount = 1;
+
+            // Handle the click event of the "+" button
+            $('#addButton').on('click', function() {
+                // Increment the counter
+                inputSetCount++;
+
+                // Clone the first set of inputs and update its IDs and names
+                const clonedInputSet = $('#inputSetsContainer .input-set').first().clone();
+
+                // Update IDs and names for all input fields inside the cloned set
+                clonedInputSet.find('input, select, textarea').each(function() {
+                    const name = $(this).attr('name');
+                    const newName = name ? name.replace(/\d+/, inputSetCount) : name;
+                    $(this).attr('name', newName);
+
+                    const id = $(this).attr('id');
+                    const newId = id ? id.replace(/\d+/, inputSetCount) : id;
+                    $(this).attr('id', newId);
+                });
+
+                // Append the cloned input set to the container
+                $('#inputSetsContainer').append(clonedInputSet);
+            });
+        });
+    </script>
+
+
+
 </body>
 
 </html>
