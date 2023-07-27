@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SalesAreaManagerController;
 use App\Http\Controllers\SalesExecetiveController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
@@ -20,12 +21,19 @@ Route::get('/Invoices', [TestController::class, 'index'])->name('Thames.Invoices
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/Dashboard', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::prefix('SalesExecutive')->group(function () {
     Route::controller(SalesExecetiveController::class)->group(function () {
-        Route::get('/DashBoard', 'DashBoard')->name('SalesExecetive.Dashboard');
-        Route::get('/DailyReportForm', 'DailyReportForm')->name('SalesExecetive.DailyReportForm');
+        Route::get('/BeforeDailyReportForm', 'BeforeDailyReportForm')->name('SalesExecetive.BeforeDailyReportForm');
+        Route::post('/PostBeforeDailyReportForm', 'BeforePostDailyReportForm')->name('SalesExecetive.PostBeforeDailyReportForm');
+    });
+});
+
+Route::prefix('AreaSalesManager')->group(function () {
+    Route::controller(SalesAreaManagerController::class)->group(function () {
+        Route::get('/BeforeMonthlyReportForm', 'BeforeMonthlyReportForm')->name('AreaSalesManager.BeforeMonthlyReportForm');
+        Route::post('/PostBeforeMonthlyReportForm', 'BeforePostMonthlyReportForm')->name('AreaSalesManager.PostBeforeMonthlyReportForm');
     });
 });
 
