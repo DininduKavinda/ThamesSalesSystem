@@ -10,10 +10,12 @@ class SalesExecetiveController extends Controller
     {
         $this->middleware('auth');
     }
-    public function DailyReportForm(){
-        return view('Web.ProfileManager.SalesExecutives.DailyReportSalesExecutive');
+
+    public function BeforeDailyReportForm(){
+        return view('Web.ProfileManager.SalesExecutives.BeforeDailyReportSalesExecutive');
     }
-    public function PostDailyReportForm(Request $request){
+
+    public function PostBeforeDailyReportForm(Request $request){
         dump($request->all());
     }
 }
